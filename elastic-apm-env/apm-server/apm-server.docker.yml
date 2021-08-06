@@ -1,0 +1,25 @@
+apm-server:
+  host: "localhost:8200"
+  rum:
+    enabled: true
+
+setup:
+  kibana:
+    host: kib01:5601
+  template:
+    settings:
+      index:
+        number_of_replicas: 0
+
+apm-server:
+  kibana:
+    enabled: true
+    host: kib01:5601
+
+output:
+  elasticsearch:
+    hosts: ["es01:9200"]
+
+queue.mem.events: 4096
+
+max_procs: 4
