@@ -2,23 +2,19 @@ apm-server:
   host: "localhost:8200"
   rum:
     enabled: true
+  kibana:
+    enabled: true
+    host: "kibana:5601"
+
+output.elasticsearch:
+  hosts: ["elasticsearch:9200"]
 
 setup:
   kibana:
-    host: kib01:5601
-  template:
-    settings:
-      index:
-        number_of_replicas: 0
-
-apm-server:
-  kibana:
-    enabled: true
-    host: kib01:5601
-
-output:
-  elasticsearch:
-    hosts: ["es01:9200"]
+    host: "kibana:5601"
+  template.settings:
+  index:
+    number_of_replicas: 0
 
 queue.mem.events: 4096
 

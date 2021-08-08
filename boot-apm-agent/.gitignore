@@ -5,6 +5,7 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 gradlew.bat
+apm-agent/
 
 ### STS ###
 .apt_generated
